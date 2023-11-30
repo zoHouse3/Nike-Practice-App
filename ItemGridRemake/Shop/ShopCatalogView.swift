@@ -60,11 +60,18 @@ struct ShopCatalogView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 HStack {
-                    Image(systemName: "slider.horizontal.3")
-                        .font(.subheadline)
-                        .padding(10)
-                    Image(systemName: "magnifyingglass")
-                        .font(.headline)
+                    Button(action: {print("")}) {
+                        Image(systemName: "slider.horizontal.3")
+                            .font(.subheadline)
+                            // .padding(10)
+                    }
+                    .tint(.black)
+                    
+                    Button(action: {print("")}, label: {
+                        Image(systemName: "magnifyingglass")
+                            .font(.headline)
+                    })
+                    .tint(.black)
                 }
             }
         })
